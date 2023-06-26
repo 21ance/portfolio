@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.w-11ch {
+	max-width: 11ch;
+	min-width: 8ch;
+}
+
+.w-55ch {
+	max-width: 55ch;
+	min-width: 10ch;
+}

@@ -14,8 +14,13 @@ export default {
 				custom: {
 					primary: "#2563eb",
 					secondary: "#111827",
+					slight: "#172135",
 					white: "#eff2f5",
+					wdark: "#E3E8ED",
+					dwhite: "#F7F3F3",
 					black: "#060504",
+					sub: "#898989",
+					dsub: "#ABADB2",
 				},
 			},
 		},
