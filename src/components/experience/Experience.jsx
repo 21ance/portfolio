@@ -9,12 +9,12 @@ const Experience = () => {
 	const data = ExperienceData.experience;
 
 	return (
-		<section className="flex flex-col gap-10">
-			<h2 className="text-3xl	md:text-5xl font-scode font-bold text-custom-secondary">
+		<section className="flex flex-col gap-6 sm:gap-10 py-12 sm:py-24">
+			<h2 className="text-3xl	md:text-5xl font-scode font-bold text-custom-secondary dark:text-custom-dwhite">
 				My experience
 			</h2>
-			<article className="flex gap-10 lg:gap-16">
-				<nav className="flex-1 flex flex-col gap-2">
+			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
+				<nav className="flex-1 flex sm:flex-col gap-2">
 					<ExpItem
 						icon={LogoSpiral}
 						title="Spiralworks"
@@ -22,7 +22,6 @@ const Experience = () => {
 						activeExp={activeExp}
 						setActiveExp={setActiveExp}
 					/>
-
 					<ExpItem
 						icon={LogoUST}
 						title="University of Santo Tomas"
@@ -57,14 +56,19 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded " +
-				(activeExp === title && "bg-custom-wdark rounded")
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded hover:dark:bg-custom-slight " +
+				(activeExp === title &&
+					"bg-custom-wdark rounded dark:bg-custom-slight")
 			}
 			onClick={() => setActiveExp(title)}
 		>
 			<img src={icon} alt={title} width="50px" className="row-[1/3]" />
-			<h3 className="hidden md:block text-lg">{title}</h3>
-			<span className="hidden md:block text-xs">{sub}</span>
+			<h3 className="hidden sm:block text-lg text-custom-secondary dark:text-custom-dwhite">
+				{title}
+			</h3>
+			<span className="hidden sm:block text-xs dark:text-custom-wdark dark:text-opacity-40">
+				{sub}
+			</span>
 		</div>
 	);
 };
@@ -73,7 +77,7 @@ const ExpDetails = (props) => {
 	const { title, company, companyLink, date, desc } = props;
 
 	return (
-		<div className="flex-1 flex flex-col gap-7 font-ssans">
+		<div className="flex-1 flex flex-col gap-7 font-ssans dark:text-custom-dwhite">
 			<header>
 				<h4 className="text-lg">
 					{title}{" "}
