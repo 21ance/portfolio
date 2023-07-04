@@ -8,7 +8,7 @@ export default {
 				inter: ["Inter", "sans-serif"],
 				osans: ["Open Sans", "sans-serif"],
 				scode: ["Source Code Pro", "monospace"],
-				ssans: ["Source Sans 3", "sans-serif"],
+				ssans: ["Source Sans", "sans-serif"],
 			},
 			colors: {
 				custom: {

@@ -1,0 +1,103 @@
+import { useState } from "react";
+import ExperienceData from "./data.json";
+import LogoUST from "../../images/logo/ust.png";
+import LogoSpiral from "../../images/logo/spiralworks.png";
+
+const Experience = () => {
+	const [activeExp, setActiveExp] = useState("Spiralworks");
+
+	const data = ExperienceData.experience;
+
+	return (
+		<section className="flex flex-col gap-10">
+			<h2 className="text-3xl	md:text-5xl font-scode font-bold text-custom-secondary">
+				My experience
+			</h2>
+			<article className="flex gap-10 lg:gap-16">
+				<nav className="flex-1 flex flex-col gap-2">
+					<ExpItem
+						icon={LogoSpiral}
+						title="Spiralworks"
+						sub="Junior Test Automation Developer"
+						activeExp={activeExp}
+						setActiveExp={setActiveExp}
+					/>
+
+					<ExpItem
+						icon={LogoUST}
+						title="University of Santo Tomas"
+						sub="Information Technology Student"
+						activeExp={activeExp}
+						setActiveExp={setActiveExp}
+					/>
+				</nav>
+				{data.map((item) => {
+					if (item.company === activeExp) {
+						return (
+							<ExpDetails
+								key={item.company}
+								title={item.title}
+								company={item.company}
+								companyLink={item.companyLink}
+								date={item.date}
+								desc={item.desc}
+							/>
+						);
+					}
+					// const { title, company, companyLink, date, desc } = props;
+				})}
+			</article>
+		</section>
+	);
+};
+
+const ExpItem = (props) => {
+	const { icon, title, sub, activeExp, setActiveExp } = props;
+
+	return (
+		<div
+			className={
+				"font-ssans grid grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded " +
+				(activeExp === title && "bg-custom-wdark rounded")
+			}
+			onClick={() => setActiveExp(title)}
+		>
+			<img src={icon} alt={title} width="50px" className="row-[1/3]" />
+			<h3 className="hidden md:block text-lg">{title}</h3>
+			<span className="hidden md:block text-xs">{sub}</span>
+		</div>
+	);
+};
+
+const ExpDetails = (props) => {
+	const { title, company, companyLink, date, desc } = props;
+
+	return (
+		<div className="flex-1 flex flex-col gap-7 font-ssans">
+			<header>
+				<h4 className="text-lg">
+					{title}{" "}
+					<a
+						href={companyLink}
+						target="_blank"
+						rel="noreferrer"
+						className="text-custom-primary"
+					>
+						@{company}
+					</a>
+				</h4>
+				<span className="text-gray-500">{date}</span>
+			</header>
+			{desc.map((d) => {
+				return (
+					<p key={d}>
+						<span className="text-custom-primary font-bold">{"> "}</span>
+						{d}
+					</p>
+				);
+			})}
+		</div>
+	);
+};
+
+export default Experience;

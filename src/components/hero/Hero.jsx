@@ -4,19 +4,13 @@ const Hero = () => {
 			<h1 className="font-scode text-4xl md:text-6xl font-bold w-11ch text-center self-center text-custom-secondary dark:text-custom-dwhite">
 				Hello {"I'm"} Lance Lopez
 			</h1>
-			<p className="w-55ch text-justify self-center text-2xl py-6 px-8 text-custom-sub dark:text-custom-dsub">
-				{/* I am a UI Engineer at Google, where I design and develop
-				user-centered interfaces for cutting-edge technology products. I
-				work with a talented team to create visually appealing and
-				intuitive designs that enhance user experience. I am passionate
-				about using technology to create beautiful and functional designs
-				that solve real-world problems. */}
-				I have a degree in Information Technology. I used to work as an
-				Automation QA. Recently, I have been honing my skills in front-end
-				development which resulted in this portfolio website. I am
-				currently looking for a junior front-end developer job.
+			<p className="w-55ch text-justify self-center text-2xl py-6 text-custom-sub dark:text-custom-dsub">
+				I have a degree in Information Technology. Recently, I have been
+				honing my skills in front-end development which resulted in this
+				portfolio website. I am currently looking for a front-end developer
+				job.
 			</p>
-			<footer className="flex gap-4 justify-center flex-wrap px-8">
+			<footer className="flex gap-4 justify-center flex-wrap">
 				<Tech
 					src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
 					text="HTML"
@@ -41,10 +35,6 @@ const Hero = () => {
 					src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
 					text="ReactJS"
 				/>
-				{/* <Tech
-					src="https://user-images.githubusercontent.com/25181517/201476821-3431d126-ae72-4c2a-a3c7-8a847070beeb.png"
-					text="Robot"
-				/> */}
 			</footer>
 		</section>
 	);
@@ -56,7 +46,6 @@ const Tech = (props) => {
 	return (
 		<div className="bg-custom-wdark dark:bg-custom-slight w-fit flex p-2 rounded gap-1 dark:text-custom-dwhite">
 			<img src={src} alt={text} width="20" className="object-contain" />
-			{/*to check, ssans font not working */}
 			<span className="font-ssans">{text}</span>
 		</div>
 	);

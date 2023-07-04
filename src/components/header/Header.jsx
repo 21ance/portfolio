@@ -13,7 +13,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className="flex justify-between py-4 px-4 md:px-6 items-center ">
+		<header className="flex justify-between py-4 items-center ">
 			<span className="text-custom-secondary dark:text-custom-white">
 				Lance
 			</span>
