@@ -14,7 +14,7 @@ const Project = () => {
 					return (
 						<article
 							key={item.project}
-							className="p-2 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start hover:bg-custom-wdark rounded-lg cursor-pointer"
+							className="p-2 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white"
 						>
 							<h3 className="font-scode text-2xl sm:text-4xl font-bold col-[1/-1]">
 								{item.project}
@@ -22,14 +22,14 @@ const Project = () => {
 							<img
 								src={item.src}
 								alt={item.project + " screenshot"}
-								className="2xl:h-[350px] min-[1900px]:h-[430px] object-cover col-[1/-1] rounded-lg border-2 border-custom-wdark bg-custom-wdark"
+								className="2xl:h-[350px] min-[1900px]:h-[430px] object-cover col-[1/-1] rounded-lg border-2 border-custom-wdark bg-custom-wdark dark:border-custom-slight"
 							/>
 							<div className="flex gap-2 sm:gap-3">
 								{item.stack.map((stack) => {
 									return (
 										<span
 											key={stack}
-											className="font-ssans text-xs px-2 py-1 bg-custom-wdark rounded h-fit"
+											className="font-ssans text-xs px-2 py-1 bg-custom-wdark dark:bg-custom-slight rounded h-fit "
 										>
 											{stack}
 										</span>
