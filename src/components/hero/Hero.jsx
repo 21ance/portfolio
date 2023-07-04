@@ -44,7 +44,7 @@ const Tech = (props) => {
 	const { src, text } = props;
 
 	return (
-		<div className="bg-custom-wdark dark:bg-custom-slight w-fit flex p-2 rounded gap-1 dark:text-custom-dwhite">
+		<div className="bg-custom-wdark dark:bg-custom-slight w-fit flex p-2 rounded-lg gap-1 dark:text-custom-dwhite">
 			<img src={src} alt={text} width="20" className="object-contain" />
 			<span className="font-ssans">{text}</span>
 		</div>

@@ -1,0 +1,46 @@
+{
+	"projects": [
+		{
+			"project": "Portfolio",
+			"src": "https://i.ibb.co/DfgYXfC/localhost-5173.jpg",
+			"desc": "My portfolio website on which you are currently browsing.",
+			"stack": ["HTML", "Tailwind", "ReactJS", "Vite"],
+			"links": {
+				"github": "https://github.com/21ance/portfolio",
+				"live": "https://github.com/21ance/portfolio",
+				"figma": "https://www.figma.com/community/file/1248078629029147874"
+			}
+		},
+		{
+			"project": "Dsgnr Landing Page",
+			"src": "https://i.ibb.co/FWgVH8m/21ance-github-io-dsgnr.jpg",
+			"desc": "A sample landing page. The design is from figma community in which I translated into code.",
+			"stack": ["HTML", "Sass", "ReactJS", "Vite"],
+			"links": {
+				"github": "https://github.com/21ance/dsgnr",
+				"live": "https://21ance.github.io/dsgnr/",
+				"figma": "https://www.figma.com/community/file/1175007259106121022"
+			}
+		},
+		{
+			"project": "Clothing E-commerce",
+			"src": "https://i.ibb.co/8BcrDrS/21ance-github-io-shopping-cart.jpg",
+			"desc": "Front-end clothing e-commerce website with add to cart feature.",
+			"stack": ["HTML", "Sass", "ReactJS", "CRA"],
+			"links": {
+				"github": "https://github.com/21ance/shopping-cart",
+				"live": "https://21ance.github.io/shopping-cart/"
+			}
+		},
+		{
+			"project": "Todo App",
+			"src": "https://i.ibb.co/z8LsQ22/21ance-github-io-Todo-List.jpg",
+			"desc": "A dynamic Todo App, written using vanilla JavaScript. ",
+			"stack": ["HTML", "Sass", "Javascript", "Webpack"],
+			"links": {
+				"github": "https://github.com/21ance/Todo-List",
+				"live": "https://21ance.github.io/Todo-List/"
+			}
+		}
+	]
+}

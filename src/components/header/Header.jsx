@@ -35,7 +35,7 @@ const Header = () => {
 				>
 					{lightMode === true ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
-				<button className="hidden sm:block px-5 py-2 font-inter rounded bg-custom-primary text-custom-white hover:bg-blue-500">
+				<button className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white hover:bg-blue-500">
 					Contact me {"->"}
 				</button>
 			</nav>

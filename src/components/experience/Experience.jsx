@@ -1,7 +1,8 @@
 import { useState } from "react";
-import ExperienceData from "./data.json";
+import ExperienceData from "./experience.json";
 import LogoUST from "../../images/logo/ust.png";
 import LogoSpiral from "../../images/logo/spiralworks.png";
+import SectionHeading from "../common/SectionHeading";
 
 const Experience = () => {
 	const [activeExp, setActiveExp] = useState("Spiralworks");
@@ -9,10 +10,8 @@ const Experience = () => {
 	const data = ExperienceData.experience;
 
 	return (
-		<section className="flex flex-col gap-6 sm:gap-10 py-12 sm:py-24">
-			<h2 className="text-3xl	md:text-5xl font-scode font-bold text-custom-secondary dark:text-custom-dwhite">
-				My experience
-			</h2>
+		<section>
+			<SectionHeading text="My experience" />
 			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
 				<nav className="flex-1 flex sm:flex-col gap-2">
 					<ExpItem
@@ -43,7 +42,6 @@ const Experience = () => {
 							/>
 						);
 					}
-					// const { title, company, companyLink, date, desc } = props;
 				})}
 			</article>
 		</section>
@@ -56,9 +54,9 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded hover:dark:bg-custom-slight " +
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded-lg hover:dark:bg-custom-slight " +
 				(activeExp === title &&
-					"bg-custom-wdark rounded dark:bg-custom-slight")
+					"bg-custom-wdark rounded-lg dark:bg-custom-slight")
 			}
 			onClick={() => setActiveExp(title)}
 		>
