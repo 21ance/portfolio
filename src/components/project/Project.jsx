@@ -6,6 +6,10 @@ import IconLink from "../common/IconLink";
 const Project = () => {
 	const data = ProjectData.projects;
 
+	function newTab(link) {
+		window.open(link, "_blank");
+	}
+
 	return (
 		<section>
 			<SectionHeading text="My latest " highlight="work" />
@@ -14,7 +18,10 @@ const Project = () => {
 					return (
 						<article
 							key={item.project}
-							className="p-2 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white"
+							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default"
+							onClick={() => {
+								if (item.links.live !== undefined) newTab(item.links.live);
+							}}
 						>
 							<h3 className="font-scode text-2xl sm:text-4xl font-bold col-[1/-1]">
 								{item.project}
@@ -47,9 +54,14 @@ const Project = () => {
 									link={item.links.github}
 									icon={<BiLogoGithub />}
 								/>
-								<IconLink link={item.links.live} icon={<BiWindowOpen />} />
+								{item.links.live && (
+									<IconLink
+										link={item.links.live}
+										icon={<BiWindowOpen />}
+									/>
+								)}
 							</nav>
-							<p className="font-ssans col-[1/-1] my-[-12px] max-w-[60ch] text-justify">
+							<p className="font-ssans col-[1/-1] my-[-12px] max-w-[75ch] text-justify">
 								{item.desc}
 							</p>
 						</article>

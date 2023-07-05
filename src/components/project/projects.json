@@ -7,7 +7,6 @@
 			"stack": ["HTML", "Tailwind", "ReactJS", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/portfolio",
-				"live": "https://github.com/21ance/portfolio",
 				"figma": "https://www.figma.com/community/file/1248078629029147874"
 			}
 		},

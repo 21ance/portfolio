@@ -1,16 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
-	const [lightMode, setLightMode] = useState(true);
+	const [lightMode, setLightMode] = useState(() => {
+		if (JSON.parse(localStorage.getItem("lightmode") !== null)) {
+			return JSON.parse(localStorage.getItem("lightmode"));
+		}
+		return true;
+	});
 
-	function modeToggle() {
-		setLightMode(!lightMode);
-		lightMode == true
+	function checkMode() {
+		localStorage.setItem("lightmode", JSON.stringify(lightMode));
+		lightMode == false
 			? document.documentElement.classList.add("dark")
 			: document.documentElement.classList.remove("dark");
 	}
+
+	function switchMode() {
+		checkMode();
+		setLightMode(!lightMode);
+	}
+
+	useEffect(() => {
+		checkMode();
+	});
 
 	return (
 		<header className="flex justify-between py-4 items-center ">
@@ -30,7 +44,7 @@ const Header = () => {
 					<BsGithub />
 				</a>
 				<button
-					onClick={() => modeToggle()}
+					onClick={() => switchMode()}
 					className="dark:text-custom-white hover:text-custom-primary dark:hover:text-custom-primary"
 				>
 					{lightMode === true ? <MdOutlineLightMode /> : <MdLightMode />}
