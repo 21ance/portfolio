@@ -23,7 +23,7 @@ const Project = () => {
 								if (item.links.live !== undefined) newTab(item.links.live);
 							}}
 						>
-							<h3 className="font-scode text-2xl sm:text-4xl font-bold col-[1/-1]">
+							<h3 className="font-scode text-2xl md:text-4xl font-bold col-[1/-1]">
 								{item.project}
 							</h3>
 							<img

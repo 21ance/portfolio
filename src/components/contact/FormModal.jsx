@@ -1,8 +1,9 @@
 import SectionHeading from "../common/SectionHeading";
+import Socials from "../common/Socials";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const FormModal = (props) => {
 	const { isModal, setIsModal } = props;
-	console.log(isModal);
 
 	return (
 		<div
@@ -16,12 +17,19 @@ const FormModal = (props) => {
 				target="_blank"
 				action="https://formsubmit.co/ca0a24088e2ac7384d873f5b9282ebf6"
 				method="POST"
-				className="bg-custom-white dark:bg-custom-secondary p-8 rounded-lg"
+				className="bg-custom-white dark:bg-custom-secondary text-custom-secondary dark:text-custom-dwhite p-8 rounded-lg grid grid-cols-[2fr_1fr] sm:grid-cols-2 gap-y-4"
 			>
 				<header className="relative">
 					<SectionHeading text="Contact" highlight=" me" />
 				</header>
-				<div className="flex flex-col gap-4 text-custom-secondary dark:text-custom-dwhite">
+				<button
+					type="button"
+					className="self-start justify-self-end w-fit text-2xl"
+					onClick={() => setIsModal(false)}
+				>
+					<AiOutlineCloseCircle />
+				</button>
+				<div className="flex flex-col gap-4 col-[1/-1] sm:col-[1/2]">
 					<input
 						type="text"
 						placeholder="Name"
@@ -38,11 +46,17 @@ const FormModal = (props) => {
 						placeholder="Your message"
 					></textarea>
 				</div>
-				<footer>
+				<Socials
+					className="sm:flex-col items-start gap-4 sm:px-4"
+					isText="true"
+					textClass="hidden sm:block"
+				/>
+				<footer className="col-[1/-1]">
 					<FormButton
 						onClick={() => setIsModal(false)}
 						color="bg-custom-primary text-custom-white lg:hover:bg-blue-500"
 						text="Send message"
+						type="submit"
 					/>
 				</footer>
 			</form>
@@ -56,7 +70,6 @@ const FormButton = (props) => {
 	return (
 		<button
 			type={type}
-			// onClick={() => setIsModal(false)}
 			onClick={onClick}
 			className={color + " px-5 py-2 mt-8 font-inter rounded-md"}
 		>
