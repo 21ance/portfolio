@@ -11,7 +11,8 @@ const Experience = () => {
 
 	return (
 		<section>
-			<SectionHeading text="My experience" />
+			{/* <SectionHeading text="My experience" /> */}
+			<SectionHeading text="About" highlight=" me" />
 			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
 				<nav className="flex-1 flex sm:flex-col gap-2">
 					<ExpItem
@@ -54,7 +55,7 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer hover:bg-custom-wdark rounded-lg hover:dark:bg-custom-slight " +
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer lg:hover:bg-custom-wdark rounded-lg lg:hover:dark:bg-custom-slight " +
 				(activeExp === title &&
 					"bg-custom-wdark rounded-lg dark:bg-custom-slight")
 			}

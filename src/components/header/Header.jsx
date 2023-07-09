@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 
-const Header = () => {
+const Header = (props) => {
+	const { setIsModal } = props;
+
 	const [lightMode, setLightMode] = useState(() => {
 		if (JSON.parse(localStorage.getItem("lightmode") !== null)) {
 			return JSON.parse(localStorage.getItem("lightmode"));
@@ -36,7 +38,7 @@ const Header = () => {
 				<NavItem href="#" content="About" />
 				<NavItem href="#" content="Work" />
 				<a
-					className="text-custom-black dark:text-custom-dwhite hover:text-custom-primary dark:hover:text-custom-primary"
+					className="text-custom-black dark:text-custom-dwhite lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
 					href="https://github.com/21ance"
 					target="_blank"
 					rel="noreferrer"
@@ -45,11 +47,14 @@ const Header = () => {
 				</a>
 				<button
 					onClick={() => switchMode()}
-					className="dark:text-custom-white hover:text-custom-primary dark:hover:text-custom-primary"
+					className="dark:text-custom-white lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
 				>
 					{lightMode === true ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
-				<button className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white hover:bg-blue-500">
+				<button
+					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white lg:hover:bg-blue-500"
+					onClick={() => setIsModal(true)}
+				>
 					Contact me {"->"}
 				</button>
 			</nav>
@@ -63,7 +68,7 @@ const NavItem = (props) => {
 	return (
 		<a
 			href={href}
-			className="hidden sm:block hover:text-custom-primary dark:hover:text-custom-primary text-custom-black dark:text-custom-dwhite"
+			className="hidden sm:block lg:hover:text-custom-primary dark:lg:hover:text-custom-primary text-custom-black dark:text-custom-dwhite"
 		>
 			{content}
 		</a>

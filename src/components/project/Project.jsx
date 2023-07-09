@@ -18,7 +18,7 @@ const Project = () => {
 					return (
 						<article
 							key={item.project}
-							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default"
+							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start lg:hover:bg-custom-wdark dark:lg:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default"
 							onClick={() => {
 								if (item.links.live !== undefined) newTab(item.links.live);
 							}}
