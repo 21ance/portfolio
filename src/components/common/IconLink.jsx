@@ -2,7 +2,7 @@ const IconLink = (props) => {
 	const {
 		icon,
 		link,
-		size = "text-2xl",
+		aClass = "text-2xl",
 		text,
 		textClass,
 		isText = false,
@@ -13,7 +13,7 @@ const IconLink = (props) => {
 			href={link}
 			target="_blank"
 			rel="noreferrer"
-			className={size + " flex justify-center items-center"}
+			className={aClass + " flex justify-center items-center"}
 		>
 			{icon}
 			{isText && <span className={"text-base " + textClass}>{text}</span>}

@@ -7,7 +7,7 @@ import {
 import IconLink from "./IconLink";
 
 const Socials = (props) => {
-	const { isText, className = "gap-2", textClass } = props;
+	const { isText, className = "gap-2", textClass, aClass } = props;
 
 	return (
 		<nav>
@@ -22,6 +22,7 @@ const Socials = (props) => {
 					text="GitHub: 21ance"
 					isText={isText}
 					textClass={textClass}
+					aClass={aClass}
 				/>
 				<IconLink
 					icon={<BiLogoGmail />}
@@ -29,6 +30,7 @@ const Socials = (props) => {
 					text="Gmail: lancelopez46@gmail.com"
 					isText={isText}
 					textClass={textClass}
+					aClass={aClass}
 				/>
 				<IconLink
 					icon={<BiLogoDiscordAlt />}
@@ -36,6 +38,7 @@ const Socials = (props) => {
 					text="Discord: lanceeee_"
 					isText={isText}
 					textClass={textClass}
+					aClass={aClass}
 				/>
 				<IconLink
 					icon={<BiLogoLinkedinSquare />}
@@ -43,6 +46,7 @@ const Socials = (props) => {
 					text="LinkedIn: Lance Angelo Lopez"
 					isText={isText}
 					textClass={textClass}
+					aClass={aClass}
 				/>
 			</nav>
 		</nav>

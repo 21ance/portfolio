@@ -3,7 +3,7 @@ const Contact = (props) => {
 
 	return (
 		<section
-			className="self-center cursor-pointer text-custom-secondary dark:text-custom-white bg-custom-wdark dark:bg-custom-slight rounded-lg w-full py-8 font-scode text-center font-bold text-3xl	md:text-5xl flex flex-col"
+			className="self-center cursor-pointer text-custom-secondary dark:text-custom-white bg-custom-wdark hover:bg-custom-wdark/50 dark:bg-custom-slight hover:dark:bg-custom-slight/50 rounded-lg w-full py-8 font-scode text-center font-bold text-3xl	md:text-5xl flex flex-col"
 			onClick={() => setIsModal(!isModal)}
 		>
 			<span>Ready to start</span>
