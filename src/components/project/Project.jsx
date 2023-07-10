@@ -1,10 +1,10 @@
 import SectionHeading from "../common/SectionHeading";
-import ProjectData from "./projects.json";
+import Data from "../../data/data.json";
 import { BiLogoFigma, BiLogoGithub, BiWindowOpen } from "react-icons/bi";
 import IconLink from "../common/IconLink";
 
 const Project = () => {
-	const data = ProjectData.projects;
+	const data = Data.projects;
 
 	function newTab(link) {
 		window.open(link, "_blank");

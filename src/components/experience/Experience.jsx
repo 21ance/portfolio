@@ -1,34 +1,29 @@
 import { useState } from "react";
-import ExperienceData from "./experience.json";
-import LogoUST from "../../images/logo/ust.png";
-import LogoSpiral from "../../images/logo/spiralworks.png";
+import Data from "../../data/data.json";
 import SectionHeading from "../common/SectionHeading";
 
 const Experience = () => {
 	const [activeExp, setActiveExp] = useState("Spiralworks");
 
-	const data = ExperienceData.experience;
+	const data = Data.experience;
 
 	return (
 		<section>
-			{/* <SectionHeading text="My experience" /> */}
 			<SectionHeading text="About" highlight=" me" />
 			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
 				<nav className="flex-1 flex sm:flex-col gap-2">
-					<ExpItem
-						icon={LogoSpiral}
-						title="Spiralworks"
-						sub="Junior Test Automation Developer"
-						activeExp={activeExp}
-						setActiveExp={setActiveExp}
-					/>
-					<ExpItem
-						icon={LogoUST}
-						title="University of Santo Tomas"
-						sub="Information Technology Student"
-						activeExp={activeExp}
-						setActiveExp={setActiveExp}
-					/>
+					{data.map((item) => {
+						return (
+							<ExpItem
+								key={item.company}
+								icon={item.src}
+								title={item.company}
+								sub={item.title}
+								activeExp={activeExp}
+								setActiveExp={setActiveExp}
+							/>
+						);
+					})}
 				</nav>
 				{data.map((item) => {
 					if (item.company === activeExp) {
