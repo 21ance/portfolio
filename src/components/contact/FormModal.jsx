@@ -1,9 +1,17 @@
+import { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import Socials from "../common/Socials";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const FormModal = (props) => {
 	const { isModal, setIsModal } = props;
+
+	const [isError, setIsError] = useState(false);
+	const [formValue, setFormValue] = useState({
+		Name: "",
+		Email: "",
+		Message: "",
+	});
 
 	return (
 		<div
@@ -12,7 +20,10 @@ const FormModal = (props) => {
 				(isModal === false ? "hidden" : "fixed") +
 				" bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full mx-[-1rem] md:mx-[-2.5rem] xl:mx-[-7rem] flex items-center justify-center"
 			}
-			onClick={() => setIsModal(false)}
+			onClick={() => {
+				setIsError(false);
+				setIsModal(false);
+			}}
 		>
 			<form
 				target="_blank"
@@ -34,24 +45,47 @@ const FormModal = (props) => {
 					<AiOutlineCloseCircle />
 				</button>
 				<div className="flex flex-col gap-4 col-[1/-1] sm:col-[1/2]">
-					<input
-						type="text"
-						name="name"
-						placeholder="Name"
-						className="bg-transparent p-1 border-b-2 border-custom-secondary/40 dark:border-custom-white/40 placeholder:text-custom-secondary/70 dark:placeholder:text-custom-white/70"
+					<FormInput
+						name="Name"
+						value={formValue.Name}
+						onChange={(e) => {
+							setIsError(false);
+							setFormValue({
+								...formValue,
+								Name: e.target.value,
+							});
+						}}
 					/>
-					<input
-						type="text"
-						name="email"
-						placeholder="Email"
-						className="bg-transparent p-1 border-b-2 border-custom-secondary/40 dark:border-custom-white/40 placeholder:text-custom-secondary/70 dark:placeholder:text-custom-white/70"
+					<FormInput
+						name="Email"
+						value={formValue.Email}
+						onChange={(e) => {
+							setIsError(false);
+							setFormValue({
+								...formValue,
+								Email: e.target.value,
+							});
+						}}
 					/>
 					<textarea
 						rows="3"
-						name="message"
+						name="Message"
 						className="resize-none bg-transparent p-1 border-b-2 border-custom-secondary/40 dark:border-custom-white/40 placeholder:text-custom-secondary/70 dark:placeholder:text-custom-white/70"
 						placeholder="Your message"
+						value={formValue.Message}
+						onChange={(e) => {
+							setIsError(false);
+							setFormValue({
+								...formValue,
+								Message: e.target.value,
+							});
+						}}
 					></textarea>
+					{isError && (
+						<p className="text-xs text-red-500 my-[-0.5rem] pl-1">
+							Please answer all fields before sending a message*
+						</p>
+					)}
 				</div>
 				<Socials
 					className="sm:flex-col items-start gap-4 sm:px-4"
@@ -60,7 +94,24 @@ const FormModal = (props) => {
 				/>
 				<footer className="col-[1/-1]">
 					<FormButton
-						onClick={() => setIsModal(false)}
+						onClick={(e) => {
+							if (
+								formValue.Name === "" ||
+								formValue.Email === "" ||
+								formValue.Message === ""
+							) {
+								setIsError(true);
+								e.preventDefault();
+							} else {
+								setIsError(false);
+								setIsModal(false);
+								setFormValue({
+									Name: "",
+									Email: "",
+									Message: "",
+								});
+							}
+						}}
 						className="bg-custom-primary text-custom-white lg:hover:bg-blue-500"
 						text="Send message"
 						type="submit"
@@ -68,6 +119,21 @@ const FormModal = (props) => {
 				</footer>
 			</form>
 		</div>
+	);
+};
+
+const FormInput = (props) => {
+	const { name, value, onChange } = props;
+
+	return (
+		<input
+			type="text"
+			name={name}
+			placeholder={name}
+			className="bg-transparent p-1 border-b-2 border-custom-secondary/40 dark:border-custom-white/40 placeholder:text-custom-secondary/70 dark:placeholder:text-custom-white/70"
+			value={value}
+			onChange={onChange}
+		/>
 	);
 };
 
