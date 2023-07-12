@@ -6,6 +6,7 @@ const IconLink = (props) => {
 		text,
 		textClass,
 		isText = false,
+		onclick,
 	} = props;
 
 	return (
@@ -13,7 +14,14 @@ const IconLink = (props) => {
 			href={link}
 			target="_blank"
 			rel="noreferrer"
-			className={aClass + " flex justify-center items-center"}
+			className={
+				aClass +
+				" flex justify-center items-center text-custom-black dark:text-custom-dwhite lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
+			}
+			onClick={(e) => {
+				onclick;
+				e.stopPropagation();
+			}}
 		>
 			{icon}
 			{isText && <span className={"text-base " + textClass}>{text}</span>}

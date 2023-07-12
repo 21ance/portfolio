@@ -57,7 +57,6 @@ const FormModal = (props) => {
 					className="sm:flex-col items-start gap-4 sm:px-4"
 					isText="true"
 					textClass="hidden sm:block"
-					aClass="hover:text-custom-primary"
 				/>
 				<footer className="col-[1/-1]">
 					<FormButton

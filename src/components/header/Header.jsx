@@ -1,16 +1,29 @@
 import { useEffect, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
+import IconLink from "../common/IconLink";
 
 const Header = (props) => {
 	const { setIsModal } = props;
 
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+	const [visible, setVisible] = useState(true);
 	const [lightMode, setLightMode] = useState(() => {
 		if (JSON.parse(localStorage.getItem("lightmode") !== null)) {
 			return JSON.parse(localStorage.getItem("lightmode"));
 		}
 		return true;
 	});
+
+	function handleScroll() {
+		const currentScrollPos = window.scrollY;
+		if (currentScrollPos > prevScrollPos) {
+			setVisible(false);
+		} else {
+			setVisible(true);
+		}
+		setPrevScrollPos(currentScrollPos);
+	}
 
 	function checkMode() {
 		localStorage.setItem("lightmode", JSON.stringify(lightMode));
@@ -28,32 +41,42 @@ const Header = (props) => {
 		checkMode();
 	});
 
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	});
+
 	return (
-		<header className="flex justify-between py-4 items-center ">
+		<header
+			className={
+				(visible ? "sticky top-0 " : "") +
+				"flex justify-between py-4 items-center bg-custom-white dark:bg-custom-secondary"
+			}
+		>
 			<span className="text-custom-secondary dark:text-custom-white">
-				Lance
+				{/* Lance */}
 			</span>
 			<nav className="flex gap-6 items-center justify-center">
 				<NavItem href="#" content="Home" />
 				<NavItem href="#" content="About" />
 				<NavItem href="#" content="Work" />
-				<a
-					className="text-custom-black dark:text-custom-dwhite lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
-					href="https://github.com/21ance"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<BsGithub />
-				</a>
+				<IconLink
+					icon={<BsGithub />}
+					link="https://github.com/21ance"
+					aClass="text-base"
+				/>
 				<button
 					onClick={() => switchMode()}
 					className="dark:text-custom-white lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
+					type="button"
 				>
 					{lightMode === true ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
 				<button
 					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white lg:hover:bg-blue-500"
 					onClick={() => setIsModal(true)}
+					type="button"
 				>
 					Contact me {"->"}
 				</button>
