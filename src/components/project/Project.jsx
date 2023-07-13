@@ -11,7 +11,7 @@ const Project = () => {
 	}
 
 	return (
-		<section>
+		<section id="work">
 			<SectionHeading text="My latest " highlight="work" />
 			<article className="text-custom-secondary flex gap-10 flex-wrap justify-center">
 				{data.map((item) => {

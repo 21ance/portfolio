@@ -8,7 +8,7 @@ const Experience = () => {
 	const data = Data.experience;
 
 	return (
-		<section>
+		<section id="about">
 			<SectionHeading text="About" highlight=" me" />
 			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
 				<nav className="flex-1 flex sm:flex-col gap-2">
