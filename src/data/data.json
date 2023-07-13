@@ -3,25 +3,29 @@
 		{
 			"company": "Spiralworks",
 			"companyLink": "https://www.linkedin.com/company/spiralworks-technologies-inc",
-			"src": "https://i.ibb.co/N7xtH9Y/spiralworks.png",
+			"src": "./experience/spiralworks.png",
 			"title": "Junior Test Automation Developer",
-			"date": "July 2022 - September 2022",
+			"date": "July 2022 - November 2022",
 			"desc": [
-				"First Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-				"Second Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-				"Third Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				"Support to develop and execute high level test scenarios on web and mobile",
+				"Detect and document defects/issues encountered",
+				"Develop and implement automation testing using pre-defined framework and practices in the company",
+				"Mostly in charge of maintaining and monitoring of automated UI regressions scripts",
+				"Software: VS Code, Git, GitLab, Postman, Android Emulator, Trello",
+				"Tech stack: Python, Robot Framework, Selenium Library"
 			]
 		},
 		{
 			"company": "University of Santo Tomas",
 			"companyLink": "https://www.facebook.com/UST1611official/",
-			"src": "https://i.ibb.co/nDFpwDy/ust.png",
+			"src": "./experience/ust.png",
 			"title": "Information Technology Student",
 			"date": "August 2018 - June 2022",
 			"desc": [
-				"Fourth Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-				"Fifth Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-				"Sixth Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				"Specialized in web and mobile app development",
+				"Exposure to various IT roles (Programming, CCNA, Project Management, QA, Support, etc)",
+				"Software: VS Code, Eclipse, Android Studio, XAMPP",
+				"Tech stack: Java, PHP, MySQL, Python, Javascript"
 			]
 		}
 	],
@@ -29,7 +33,7 @@
 	"projects": [
 		{
 			"project": "Portfolio",
-			"src": "https://i.ibb.co/DfgYXfC/localhost-5173.jpg",
+			"src": "./projects/portfolio.jpg",
 			"desc": "My portfolio website on which you are currently browsing.",
 			"stack": ["HTML", "Tailwind", "ReactJS", "Vite"],
 			"links": {
@@ -39,7 +43,7 @@
 		},
 		{
 			"project": "Dsgnr Landing Page",
-			"src": "https://i.ibb.co/FWgVH8m/21ance-github-io-dsgnr.jpg",
+			"src": "./projects/dsgnr.jpg",
 			"desc": "A sample landing page. The design is from figma community in which I translated into code.",
 			"stack": ["HTML", "Sass", "ReactJS", "Vite"],
 			"links": {
@@ -50,7 +54,7 @@
 		},
 		{
 			"project": "Clothing E-commerce",
-			"src": "https://i.ibb.co/8BcrDrS/21ance-github-io-shopping-cart.jpg",
+			"src": "./projects/nox.jpg",
 			"desc": "Front-end clothing e-commerce website with add to cart feature.",
 			"stack": ["HTML", "Sass", "ReactJS", "CRA"],
 			"links": {
@@ -60,7 +64,7 @@
 		},
 		{
 			"project": "Todo App",
-			"src": "https://i.ibb.co/z8LsQ22/21ance-github-io-Todo-List.jpg",
+			"src": "./projects/todo.jpg",
 			"desc": "A dynamic Todo App, written using vanilla JavaScript. ",
 			"stack": ["HTML", "Sass", "Javascript", "Webpack"],
 			"links": {
