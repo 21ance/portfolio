@@ -18,7 +18,7 @@ const Header = (props) => {
 		if (JSON.parse(localStorage.getItem("lightmode") !== null)) {
 			return JSON.parse(localStorage.getItem("lightmode"));
 		}
-		return true;
+		return false;
 	});
 
 	function handleScroll() {

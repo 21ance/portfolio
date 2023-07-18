@@ -34,7 +34,7 @@
 		{
 			"project": "Portfolio",
 			"src": "./projects/portfolio.jpg",
-			"desc": "My portfolio website on which you are currently browsing.",
+			"desc": "My portfolio website that you are currently browsing.",
 			"stack": ["HTML", "Tailwind", "ReactJS", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/portfolio",
@@ -44,12 +44,30 @@
 		{
 			"project": "Dsgnr Landing Page",
 			"src": "./projects/dsgnr.jpg",
-			"desc": "A sample landing page. The design is from figma community in which I translated into code.",
+			"desc": "A sample landing page.",
 			"stack": ["HTML", "Sass", "ReactJS", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/dsgnr",
 				"live": "https://21ance.github.io/dsgnr/",
 				"figma": "https://www.figma.com/community/file/1175007259106121022"
+			}
+		},
+		{
+			"project": "Linkly",
+			"src": "./projects/linkly.jpg",
+			"desc": "Short link and QR code generator.",
+			"stack": [
+				"HTML",
+				"Tailwind",
+				"Javascript",
+				"goolnk API",
+				"goqr.me API",
+				"Vite"
+			],
+			"links": {
+				"github": "https://github.com/21ance/linkly",
+				"live": "https://21ance.github.io/linkly/",
+				"figma": "https://www.figma.com/community/file/1238543222697425130"
 			}
 		},
 		{
@@ -65,11 +83,27 @@
 		{
 			"project": "Todo App",
 			"src": "./projects/todo.jpg",
-			"desc": "A dynamic Todo App, written using vanilla JavaScript. ",
+			"desc": "Todo app that can create, read, update, and delete any Projects or Tasks.",
 			"stack": ["HTML", "Sass", "Javascript", "Webpack"],
 			"links": {
 				"github": "https://github.com/21ance/Todo-List",
 				"live": "https://21ance.github.io/Todo-List/"
+			}
+		},
+		{
+			"project": "Weather App",
+			"src": "./projects/weather.jpg",
+			"desc": "A weather forecast project using free tier of OpenWeatherMap API.",
+			"stack": [
+				"HTML",
+				"Sass",
+				"Javascript",
+				"OpenWeatherMap API",
+				"Webpack"
+			],
+			"links": {
+				"github": "https://github.com/21ance/Weather-App",
+				"live": "https://21ance.github.io/Weather-App/"
 			}
 		}
 	]

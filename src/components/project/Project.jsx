@@ -18,7 +18,7 @@ const Project = () => {
 					return (
 						<article
 							key={item.project}
-							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,1fr] gap-6 self-start lg:hover:bg-custom-wdark dark:lg:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default"
+							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,auto] gap-6 self-start lg:hover:bg-custom-wdark dark:lg:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default"
 							onClick={() => {
 								if (item.links.live !== undefined) newTab(item.links.live);
 							}}
@@ -31,7 +31,7 @@ const Project = () => {
 								alt={item.project + " screenshot"}
 								className="2xl:h-[350px] min-[1900px]:h-[430px] object-cover col-[1/-1] rounded-lg border-2 border-custom-wdark bg-custom-wdark dark:border-custom-slight"
 							/>
-							<div className="flex gap-2 sm:gap-3">
+							<div className="flex gap-2 sm:gap-3 flex-wrap">
 								{item.stack.map((stack) => {
 									return (
 										<span
