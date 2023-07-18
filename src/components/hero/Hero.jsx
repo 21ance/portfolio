@@ -1,10 +1,10 @@
 const Hero = () => {
 	return (
 		<section className="flex flex-col flex-wrap py-6 md:py-20" id="home">
-			<h1 className="font-scode text-4xl md:text-6xl font-bold w-11ch text-center self-center text-custom-secondary dark:text-custom-dwhite">
+			<h1 className="font-scode text-4xl md:text-6xl font-bold max-w-[11ch] min-w-[8ch] text-center self-center text-custom-secondary dark:text-custom-dwhite">
 				Hello {"I'm"} Lance Lopez
 			</h1>
-			<p className="w-55ch text-justify self-center text-2xl py-6 text-custom-sub dark:text-custom-dsub">
+			<p className="max-w-[55ch] min-w-[10ch] text-justify self-center text-2xl py-6 text-custom-sub dark:text-custom-dsub">
 				I have a degree in Information Technology. Recently, I have been
 				honing my skills in front-end development which resulted in this
 				portfolio website. I am currently looking for a front-end developer

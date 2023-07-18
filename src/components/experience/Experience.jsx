@@ -3,9 +3,8 @@ import Data from "../../data/data.json";
 import SectionHeading from "../common/SectionHeading";
 
 const Experience = () => {
-	const [activeExp, setActiveExp] = useState("Spiralworks");
-
 	const data = Data.experience;
+	const [activeExp, setActiveExp] = useState(data[0].company);
 
 	return (
 		<section id="about">
@@ -50,7 +49,7 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer lg:hover:bg-custom-wdark rounded-lg lg:hover:dark:bg-custom-slight " +
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer sm:hover:bg-custom-wdark rounded-lg sm:hover:dark:bg-custom-slight " +
 				(activeExp === title &&
 					"bg-custom-wdark rounded-lg dark:bg-custom-slight")
 			}
@@ -79,7 +78,7 @@ const ExpDetails = (props) => {
 						href={companyLink}
 						target="_blank"
 						rel="noreferrer"
-						className="text-custom-primary"
+						className="text-custom-primary sm:hover:text-custom-primary/70"
 					>
 						@{company}
 					</a>

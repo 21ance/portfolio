@@ -79,13 +79,13 @@ const Header = (props) => {
 				/>
 				<button
 					onClick={() => switchMode()}
-					className="dark:text-custom-white lg:hover:text-custom-primary dark:lg:hover:text-custom-primary"
+					className="dark:text-custom-white sm:hover:text-custom-primary dark:sm:hover:text-custom-primary"
 					type="button"
 				>
 					{lightMode ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
 				<button
-					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white lg:hover:bg-blue-500"
+					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white sm:hover:bg-blue-500"
 					onClick={() => setIsModal(true)}
 					type="button"
 				>
@@ -103,7 +103,7 @@ const NavItem = (props) => {
 		<a
 			href={href}
 			className={
-				"lg:hover:text-custom-primary sm:block dark:lg:hover:text-custom-primary text-custom-black dark:text-custom-dwhite " +
+				"sm:hover:text-custom-primary sm:block dark:sm:hover:text-custom-primary text-custom-black dark:text-custom-dwhite " +
 				(mobileNav ? "block" : "hidden")
 			}
 		>

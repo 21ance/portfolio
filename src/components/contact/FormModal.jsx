@@ -112,7 +112,7 @@ const FormModal = (props) => {
 								});
 							}
 						}}
-						className="bg-custom-primary text-custom-white lg:hover:bg-blue-500"
+						className="bg-custom-primary text-custom-white sm:hover:bg-blue-500"
 						text="Send message"
 						type="submit"
 					/>
