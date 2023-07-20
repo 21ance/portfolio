@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 import IconLink from "../common/IconLink";
 import { motion } from "framer-motion";
-import variants from "../animation/Variants";
+import commonVariant from "../animation/commonVariant";
 
 const Header = (props) => {
 	const { setIsModal } = props;
@@ -57,7 +57,7 @@ const Header = (props) => {
 
 	return (
 		<motion.header
-			variants={variants.fadeIn}
+			variants={commonVariant.fadeIn}
 			initial="hidden"
 			whileInView="visible"
 			className={

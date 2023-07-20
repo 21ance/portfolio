@@ -3,7 +3,7 @@ import SectionHeading from "../common/SectionHeading";
 import Socials from "../common/Socials";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
-import variants from "../animation/Variants";
+import modalVariant from "../animation/modalVariant";
 
 const FormModal = (props) => {
 	const { isModal, setIsModal } = props;
@@ -19,7 +19,7 @@ const FormModal = (props) => {
 		<AnimatePresence>
 			{isModal && (
 				<motion.div
-					variants={variants.fadeIn}
+					variants={modalVariant.background}
 					initial="hidden"
 					whileInView="visible"
 					exit="hidden"
@@ -31,7 +31,7 @@ const FormModal = (props) => {
 					}}
 				>
 					<motion.form
-						variants={variants.modal}
+						variants={modalVariant.modal}
 						target="_blank"
 						action="https://formsubmit.co/ca0a24088e2ac7384d873f5b9282ebf6"
 						method="POST"

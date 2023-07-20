@@ -1,16 +1,43 @@
+import { motion } from "framer-motion";
+import heroVariants from "../animation/heroVariant";
+import Typewriter from "typewriter-effect";
+
 const Hero = () => {
 	return (
-		<section className="flex flex-col flex-wrap py-6 md:py-20" id="home">
-			<h1 className="font-scode text-4xl md:text-6xl font-bold max-w-[11ch] min-w-[8ch] text-center self-center text-custom-secondary dark:text-custom-dwhite">
-				Hello {"I'm"} Lance Lopez
-			</h1>
-			<p className="max-w-[55ch] min-w-[10ch] text-justify self-center text-2xl py-6 text-custom-sub dark:text-custom-dsub">
+		<section
+			className="flex flex-col flex-wrap py-6 md:py-20 mt-[-76px] sm:mt-0"
+			id="home"
+		>
+			<div className="font-scode text-4xl md:text-6xl w-[13ch] sm:w-[450px] font-bold text-center self-center text-custom-secondary dark:text-custom-dwhite">
+				<Typewriter
+					onInit={(typewriter) => {
+						typewriter
+							.start()
+							.typeString("<span>Hello, I'm Lance Lopez</span>");
+					}}
+					options={{
+						delay: 60,
+					}}
+				/>
+			</div>
+
+			<motion.p
+				variants={heroVariants.heroSubHeading}
+				initial="hidden"
+				animate="visible"
+				className="max-w-[55ch] min-w-[10ch] text-justify self-center text-2xl py-6 text-custom-sub dark:text-custom-dsub"
+			>
 				I have a degree in Information Technology. Recently, I have been
 				honing my skills in front-end development which resulted in this
 				portfolio website. I am currently looking for a front-end developer
 				job.
-			</p>
-			<footer className="flex gap-4 justify-center flex-wrap">
+			</motion.p>
+			<motion.footer
+				variants={heroVariants.heroStack}
+				initial="hidden"
+				animate="visible"
+				className="flex gap-4 justify-center flex-wrap"
+			>
 				<Tech
 					src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
 					text="HTML"
@@ -35,7 +62,7 @@ const Hero = () => {
 					src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
 					text="ReactJS"
 				/>
-			</footer>
+			</motion.footer>
 		</section>
 	);
 };
@@ -44,10 +71,13 @@ const Tech = (props) => {
 	const { src, text } = props;
 
 	return (
-		<div className="bg-custom-wdark dark:bg-custom-slight w-fit flex p-2 rounded-lg gap-1 dark:text-custom-dwhite">
+		<motion.div
+			variants={heroVariants.heroStackItems}
+			className="bg-custom-wdark dark:bg-custom-slight w-fit flex p-2 rounded-lg gap-1 dark:text-custom-dwhite"
+		>
 			<img src={src} alt={text} width="20" className="object-contain" />
 			<span className="font-ssans">{text}</span>
-		</div>
+		</motion.div>
 	);
 };
 
