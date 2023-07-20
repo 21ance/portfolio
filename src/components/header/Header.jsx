@@ -7,6 +7,8 @@ import {
 	MdMenuOpen,
 } from "react-icons/md";
 import IconLink from "../common/IconLink";
+import { motion } from "framer-motion";
+import variants from "../animation/Variants";
 
 const Header = (props) => {
 	const { setIsModal } = props;
@@ -54,7 +56,10 @@ const Header = (props) => {
 	});
 
 	return (
-		<header
+		<motion.header
+			variants={variants.fadeIn}
+			initial="hidden"
+			whileInView="visible"
 			className={
 				(visible ? "sticky top-0 " : "") +
 				"flex justify-between sm:justify-end py-4 items-center bg-custom-white dark:bg-custom-secondary relative min-h-[56px]"
@@ -79,20 +84,20 @@ const Header = (props) => {
 				/>
 				<button
 					onClick={() => switchMode()}
-					className="dark:text-custom-white sm:hover:text-custom-primary dark:sm:hover:text-custom-primary"
+					className="dark:text-custom-white duration-200 sm:hover:text-custom-primary dark:sm:hover:text-custom-primary"
 					type="button"
 				>
 					{lightMode ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
 				<button
-					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white sm:hover:bg-blue-500"
+					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white duration-200 sm:hover:bg-blue-500"
 					onClick={() => setIsModal(true)}
 					type="button"
 				>
 					Contact me {"->"}
 				</button>
 			</nav>
-		</header>
+		</motion.header>
 	);
 };
 
@@ -103,7 +108,7 @@ const NavItem = (props) => {
 		<a
 			href={href}
 			className={
-				"sm:hover:text-custom-primary sm:block dark:sm:hover:text-custom-primary text-custom-black dark:text-custom-dwhite " +
+				"sm:hover:text-custom-primary sm:block duration-200 dark:sm:hover:text-custom-primary text-custom-black dark:text-custom-dwhite " +
 				(mobileNav ? "block" : "hidden")
 			}
 		>
