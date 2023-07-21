@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Data from "../../data/data.json";
 import SectionHeading from "../common/SectionHeading";
+import FramerSection from "../common/FramerSection";
+import { motion } from "framer-motion";
+import commonVariant from "../animation/commonVariant";
 
 const Experience = () => {
 	const data = Data.experience;
 	const [activeExp, setActiveExp] = useState(data[0].company);
 
 	return (
-		<section id="about">
+		<FramerSection id="about">
 			<SectionHeading text="About" highlight=" me" />
 			<article className="flex gap-6 sm:gap-10 flex-col sm:flex-row lg:gap-16">
 				<nav className="flex-1 flex sm:flex-col gap-2">
@@ -39,7 +42,7 @@ const Experience = () => {
 					}
 				})}
 			</article>
-		</section>
+		</FramerSection>
 	);
 };
 
@@ -49,7 +52,7 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer sm:hover:bg-custom-wdark rounded-lg sm:hover:dark:bg-custom-slight " +
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer duration-200 hover:bg-custom-wdark rounded-lg hover:dark:bg-custom-slight " +
 				(activeExp === title &&
 					"bg-custom-wdark rounded-lg dark:bg-custom-slight")
 			}
@@ -70,19 +73,24 @@ const ExpDetails = (props) => {
 	const { title, company, companyLink, date, desc } = props;
 
 	return (
-		<div className="flex-1 flex flex-col gap-7 font-ssans dark:text-custom-dwhite">
+		<motion.div
+			variants={commonVariant.fadeRight}
+			initial="hidden"
+			whileInView="visible"
+			className="flex-1 flex flex-col gap-7 font-ssans dark:text-custom-dwhite"
+		>
 			<header>
-				<h4 className="text-lg">
+				<span className="text-lg block">
 					{title}{" "}
 					<a
 						href={companyLink}
 						target="_blank"
 						rel="noreferrer"
-						className="text-custom-primary sm:hover:text-custom-primary/70"
+						className="text-custom-primary duration-200 hover:text-custom-primary/70"
 					>
 						@{company}
 					</a>
-				</h4>
+				</span>
 				<span className="text-gray-500">{date}</span>
 			</header>
 			{desc.map((d) => {
@@ -93,7 +101,7 @@ const ExpDetails = (props) => {
 					</p>
 				);
 			})}
-		</div>
+		</motion.div>
 	);
 };
 
