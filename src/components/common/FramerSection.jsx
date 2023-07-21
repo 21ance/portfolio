@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import commonVariant from "../animation/commonVariant";
+import commonVariant from "../../animation/commonVariant";
 
 const FramerSection = (props) => {
 	const {

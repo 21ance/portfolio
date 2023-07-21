@@ -2,6 +2,10 @@
 export default {
 	darkMode: "class",
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	//https://stackoverflow.com/a/72323247
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
 	theme: {
 		extend: {
 			fontFamily: {

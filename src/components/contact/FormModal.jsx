@@ -3,7 +3,7 @@ import SectionHeading from "../common/SectionHeading";
 import Socials from "../common/Socials";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
-import modalVariant from "../animation/modalVariant";
+import modalVariant from "../../animation/modalVariant";
 
 const FormModal = (props) => {
 	const { isModal, setIsModal } = props;
@@ -24,7 +24,7 @@ const FormModal = (props) => {
 					whileInView="visible"
 					exit="hidden"
 					id="modal"
-					className="fixed bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full mx-[-1rem] md:mx-[-2.5rem] xl:mx-[-7rem] flex items-center justify-center"
+					className="fixed bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full mx-[-1rem] md:mx-[-2.5rem] xl:mx-[-7rem] flex items-center justify-center z-20"
 					onClick={() => {
 						setIsError(false);
 						setIsModal(false);
@@ -118,7 +118,7 @@ const FormModal = (props) => {
 										});
 									}
 								}}
-								className="bg-custom-primary text-custom-white sm:hover:bg-blue-500"
+								className="bg-custom-primary text-custom-white duration-200 hover:bg-blue-500"
 								text="Send message"
 								type="submit"
 							/>
@@ -141,6 +141,7 @@ const FormInput = (props) => {
 			className="bg-transparent p-1 border-b-2 border-custom-secondary/40 dark:border-custom-white/40 placeholder:text-custom-secondary/70 dark:placeholder:text-custom-white/70"
 			value={value}
 			onChange={onChange}
+			autoComplete="off"
 		/>
 	);
 };

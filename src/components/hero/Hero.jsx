@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import heroVariants from "../animation/heroVariant";
+import heroVariants from "../../animation/heroVariant";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
 	return (
 		<section
-			className="flex flex-col flex-wrap py-6 md:py-20 mt-[-76px] sm:mt-0"
+			className="flex flex-col flex-wrap py-6 md:py-20 mt-[-76px] sm:m-0"
 			id="home"
 		>
-			<div className="font-scode text-4xl md:text-6xl w-[13ch] sm:w-[450px] font-bold text-center self-center text-custom-secondary dark:text-custom-dwhite">
+			<div className="font-scode text-4xl md:text-6xl w-[13ch] sm:w-[450px] h-[85px] md:h-[135px] font-bold text-center self-center text-custom-secondary dark:text-custom-dwhite">
 				<Typewriter
 					onInit={(typewriter) => {
 						typewriter

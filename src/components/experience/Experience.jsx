@@ -3,7 +3,7 @@ import Data from "../../data/data.json";
 import SectionHeading from "../common/SectionHeading";
 import FramerSection from "../common/FramerSection";
 import { motion } from "framer-motion";
-import commonVariant from "../animation/commonVariant";
+import commonVariant from "../../animation/commonVariant";
 
 const Experience = () => {
 	const data = Data.experience;

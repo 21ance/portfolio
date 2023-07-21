@@ -16,7 +16,7 @@ const IconLink = (props) => {
 			rel="noreferrer"
 			className={
 				aClass +
-				" flex justify-center items-center text-custom-black dark:text-custom-dwhite sm:hover:text-custom-primary dark:sm:hover:text-custom-primary"
+				" flex justify-center items-center text-custom-black dark:text-custom-dwhite duration-200 hover:text-custom-primary dark:hover:text-custom-primary"
 			}
 			onClick={(e) => {
 				onclick;

@@ -4,8 +4,8 @@ import { BiLogoFigma, BiLogoGithub, BiWindowOpen } from "react-icons/bi";
 import IconLink from "../common/IconLink";
 import FramerSection from "../common/FramerSection";
 import { motion } from "framer-motion";
-import commonVariant from "../animation/commonVariant";
-import projectVariant from "../animation/projectVariant";
+import commonVariant from "../../animation/commonVariant";
+import projectVariant from "../../animation/projectVariant";
 
 const Project = () => {
 	const data = Data.projects;
