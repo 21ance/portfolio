@@ -68,6 +68,7 @@ const Header = (props) => {
 			<button
 				className="dark:text-custom-white sm:hidden text-custom-secondary"
 				type="button"
+				aria-label="menu"
 				onClick={() => setMobileNav(!mobileNav)}
 			>
 				{mobileNav ? <MdMenuOpen /> : <MdMenu />}
@@ -86,6 +87,7 @@ const Header = (props) => {
 					onClick={() => switchMode()}
 					className="dark:text-custom-white duration-200 hover:text-custom-primary dark:hover:text-custom-primary"
 					type="button"
+					aria-label="change light or dark mode"
 				>
 					{lightMode ? <MdOutlineLightMode /> : <MdLightMode />}
 				</button>
@@ -93,6 +95,7 @@ const Header = (props) => {
 					className="hidden sm:block px-5 py-2 font-inter rounded-lg bg-custom-primary text-custom-white duration-200 hover:bg-blue-500"
 					onClick={() => setIsModal(true)}
 					type="button"
+					aria-label="contact me"
 				>
 					Contact me {"->"}
 				</button>
@@ -109,6 +112,7 @@ const NavItem = (props) => {
 			variants={commonVariant.fadeIn}
 			initial="hidden"
 			whileInView="visible"
+			aria-label={"link to " + content}
 			href={href}
 			className={
 				"hover:text-custom-primary sm:block duration-200 dark:hover:text-custom-primary text-custom-black dark:text-custom-dwhite " +

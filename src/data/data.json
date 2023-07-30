@@ -79,32 +79,6 @@
 				"github": "https://github.com/21ance/shopping-cart",
 				"live": "https://21ance.github.io/shopping-cart/"
 			}
-		},
-		{
-			"project": "Todo App",
-			"src": "./projects/todo.jpg",
-			"desc": "Todo app that can create, read, update, and delete any Projects or Tasks.",
-			"stack": ["HTML", "Sass", "Javascript", "Webpack"],
-			"links": {
-				"github": "https://github.com/21ance/Todo-List",
-				"live": "https://21ance.github.io/Todo-List/"
-			}
-		},
-		{
-			"project": "Weather App",
-			"src": "./projects/weather.jpg",
-			"desc": "A weather forecast project using free tier of OpenWeatherMap API.",
-			"stack": [
-				"HTML",
-				"Sass",
-				"Javascript",
-				"OpenWeatherMap API",
-				"Webpack"
-			],
-			"links": {
-				"github": "https://github.com/21ance/Weather-App",
-				"live": "https://21ance.github.io/Weather-App/"
-			}
 		}
 	]
 }

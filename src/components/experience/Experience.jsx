@@ -84,6 +84,7 @@ const ExpDetails = (props) => {
 					{title}{" "}
 					<a
 						href={companyLink}
+						aria-label={"link to " + companyLink}
 						target="_blank"
 						rel="noreferrer"
 						className="text-custom-primary duration-200 hover:text-custom-primary/70"
