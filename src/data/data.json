@@ -34,18 +34,28 @@
 		{
 			"project": "Portfolio",
 			"src": "./projects/portfolio.jpg",
-			"desc": "My portfolio website that you are currently browsing.",
-			"stack": ["HTML", "Tailwind", "ReactJS", "Vite"],
+			"desc": "My personal website that you are currently browsing.",
+			"stack": ["HTML", "Tailwind", "React", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/portfolio",
 				"figma": "https://www.figma.com/community/file/1248078629029147874"
 			}
 		},
 		{
+			"project": "Send",
+			"src": "./projects/send.png",
+			"desc": "Fullstack project that uses REST API to manipulate data.",
+			"stack": ["HTML", "Tailwind", "React", "Strapi", "REST API", "Vite"],
+			"links": {
+				"github": "https://github.com/21ance/send",
+				"live": "https://21ance.github.io/send/"
+			}
+		},
+		{
 			"project": "Dsgnr Landing Page",
 			"src": "./projects/dsgnr.jpg",
 			"desc": "A sample landing page.",
-			"stack": ["HTML", "Sass", "ReactJS", "Vite"],
+			"stack": ["HTML", "Sass", "React", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/dsgnr",
 				"live": "https://21ance.github.io/dsgnr/",
@@ -74,11 +84,42 @@
 			"project": "Clothing E-commerce",
 			"src": "./projects/nox.jpg",
 			"desc": "Front-end clothing e-commerce website with add to cart feature.",
-			"stack": ["HTML", "Sass", "ReactJS", "CRA"],
+			"stack": ["HTML", "Sass", "React", "CRA"],
 			"links": {
 				"github": "https://github.com/21ance/shopping-cart",
 				"live": "https://21ance.github.io/shopping-cart/"
 			}
+		}
+	],
+
+	"stack": [
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
+			"tech": "HTML"
+		},
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
+			"tech": "CSS"
+		},
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png",
+			"tech": "Sass"
+		},
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png",
+			"tech": "Tailwind"
+		},
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+			"tech": "JavaScript"
+		},
+		{
+			"src": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
+			"tech": "React"
+		},
+		{
+			"src": "./strapi.png",
+			"tech": "Strapi"
 		}
 	]
 }

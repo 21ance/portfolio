@@ -17,7 +17,7 @@ const Project = () => {
 	return (
 		<FramerSection id="work">
 			<SectionHeading text="My latest " highlight="work" />
-			<article className="text-custom-secondary flex gap-10 flex-wrap justify-center">
+			<article className="text-custom-secondary grid 2xl:grid-cols-[1fr,1fr] gap-10 md:gap-6">
 				{data.map((item) => {
 					return (
 						<motion.article
@@ -25,21 +25,21 @@ const Project = () => {
 							initial="hidden"
 							whileInView="visible"
 							key={item.project}
-							className="p-2 py-4 sm:p-6 pt-0 grid grid-cols-[1fr,auto] gap-6 self-start duration-300 hover:scale-[1.01] transform hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default first:hover:scale-100"
+							className="p-2 py-4 sm:p-6  grid grid-cols-[1fr,auto] gap-6 self-start duration-300 hover:scale-[1.01] transform hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default first:hover:scale-100"
 							onClick={() => {
 								if (item.links.live !== undefined) newTab(item.links.live);
 							}}
 						>
 							<motion.h3
 								variants={commonVariant.fadeUp}
-								className="font-scode text-2xl md:text-4xl font-bold col-[1/-1]"
+								className="font-scode text-2xl md:text-4xl font-bold col-[1/-1] mb-[-0.5rem]"
 							>
 								{item.project}
 							</motion.h3>
 							<img
 								src={item.src}
 								alt={item.project + " screenshot"}
-								className="2xl:h-[350px] min-[1900px]:h-[430px] object-cover col-[1/-1] rounded-lg border-2 border-custom-wdark bg-custom-wdark dark:border-custom-slight"
+								className="w-full object-cover col-[1/-1] rounded-lg border-2 border-custom-wdark bg-custom-wdark dark:border-custom-slight"
 							/>
 							<motion.div
 								variants={projectVariant.projStack}
@@ -78,7 +78,7 @@ const Project = () => {
 									/>
 								)}
 							</nav>
-							<p className="font-ssans col-[1/-1] my-[-12px] max-w-[75ch] text-justify">
+							<p className="font-ssans col-[1/-1] my-[-12px] text-justify">
 								{item.desc}
 							</p>
 						</motion.article>

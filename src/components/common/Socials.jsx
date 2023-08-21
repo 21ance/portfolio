@@ -32,7 +32,7 @@ const Socials = (props) => {
 					textClass={textClass}
 					aClass={aClass}
 				/>
-				<IconLink
+				{/* <IconLink
 					icon={<BiLogoDiscordAlt />}
 					link="https://discordapp.com/users/lanceeee_"
 					text="Discord: lanceeee_"
@@ -47,7 +47,7 @@ const Socials = (props) => {
 					isText={isText}
 					textClass={textClass}
 					aClass={aClass}
-				/>
+				/> */}
 			</nav>
 		</nav>
 	);
