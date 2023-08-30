@@ -1,6 +1,19 @@
 {
 	"experience": [
 		{
+			"company": "CannyFx",
+			"companyLink": "https://cannyfx.com/",
+			"src": "./experience/canny.png",
+			"title": "Technical Consultant",
+			"date": "October 2022 - January 2023",
+			"desc": [
+				"Part-time",
+				"Provide assistance with technical issues",
+				"Translate technical jargon into layman's terms",
+				"Liaise between the client and developers"
+			]
+		},
+		{
 			"company": "Spiralworks Technologies",
 			"companyLink": "https://www.linkedin.com/company/spiralworks-technologies-inc",
 			"src": "./experience/spiralworks.png",
@@ -27,6 +40,14 @@
 				"Software: VS Code, Eclipse, Android Studio, XAMPP",
 				"Tech stack: Java, PHP, MySQL, Python, Javascript"
 			]
+		},
+		{
+			"company": "August 99, Inc.",
+			"companyLink": "https://august99.com/",
+			"src": "./experience/aug99.png",
+			"title": "Quality Analyst Intern",
+			"date": "January 2022 - May 2022",
+			"desc": []
 		}
 	],
 
@@ -34,7 +55,7 @@
 		{
 			"project": "Portfolio",
 			"src": "./projects/portfolio.jpg",
-			"desc": "My personal website that you are currently browsing.",
+			"desc": "My personal website that you are currently browsing - also serves as an alternative for my resume.",
 			"stack": ["HTML", "Tailwind", "React", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/portfolio",
@@ -44,7 +65,7 @@
 		{
 			"project": "Send",
 			"src": "./projects/send.png",
-			"desc": "Fullstack project that uses REST API to manipulate data.",
+			"desc": "Mini forum website that uses REST API. The API endpoints were created using Strapi CMS. I then utilized asynchronous API calls to perform CRUD operations on the front end.",
 			"stack": ["HTML", "Tailwind", "React", "Strapi", "REST API", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/send",

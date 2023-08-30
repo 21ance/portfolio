@@ -7,7 +7,7 @@ import commonVariant from "../../animation/commonVariant";
 
 const Experience = () => {
 	const data = Data.experience;
-	const [activeExp, setActiveExp] = useState(data[0].company);
+	const [activeExp, setActiveExp] = useState(data[1].company);
 
 	return (
 		<FramerSection id="about">
@@ -52,13 +52,17 @@ const ExpItem = (props) => {
 	return (
 		<div
 			className={
-				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-5 cursor-pointer duration-200 hover:bg-custom-wdark rounded-lg hover:dark:bg-custom-slight " +
+				"font-ssans grid w-fit sm:w-full sm:grid-cols-[auto,1fr] gap-x-4 p-3 md:p-5 cursor-pointer duration-200 hover:bg-custom-wdark rounded-lg hover:dark:bg-custom-slight " +
 				(activeExp === title &&
 					"bg-custom-wdark rounded-lg dark:bg-custom-slight")
 			}
 			onClick={() => setActiveExp(title)}
 		>
-			<img src={icon} alt={title} width="50px" className="row-[1/3]" />
+			<img
+				src={icon}
+				alt={title}
+				className="row-[1/3] h-[50px] w-[50px]"
+			/>
 			<h3 className="hidden sm:block text-lg text-custom-secondary dark:text-custom-dwhite">
 				{title}
 			</h3>
