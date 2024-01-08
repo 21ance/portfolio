@@ -25,7 +25,7 @@ const Project = () => {
 							initial="hidden"
 							whileInView="visible"
 							key={item.project}
-							className="p-2 py-4 sm:p-6  grid grid-cols-[1fr,auto] gap-6 self-start duration-300 hover:scale-[1.01] transform hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:bg-custom-wdark dark:first:bg-custom-slight first:cursor-default first:hover:scale-100"
+							className="p-2 py-4 sm:p-6  grid grid-cols-[1fr,auto] gap-6 self-start duration-300 hover:scale-[1.01] transform hover:bg-custom-wdark dark:hover:bg-custom-slight rounded-lg cursor-pointer dark:text-custom-white first:cursor-default first:hover:scale-100"
 							onClick={() => {
 								if (item.links.live !== undefined) newTab(item.links.live);
 							}}

@@ -7,10 +7,9 @@
 			"title": "Technical Consultant",
 			"date": "October 2022 - January 2023",
 			"desc": [
-				"Part-time",
-				"Provide assistance with technical issues",
-				"Translate technical jargon into layman's terms",
-				"Liaise between the client and developers"
+				"Provided assistance and suggestions on how to proceed with the technical side of CannyFX.",
+				"Liaised between the client and developers.",
+				"Translated technical jargon into layman's terms."
 			]
 		},
 		{
@@ -20,11 +19,11 @@
 			"title": "Junior Test Automation Developer",
 			"date": "July 2022 - November 2022",
 			"desc": [
-				"Support to develop and execute high level test scenarios on web and mobile",
-				"Detect and document defects/issues encountered",
-				"Develop and implement automation testing using pre-defined framework and practices in the company",
-				"Mostly in charge of maintaining and monitoring of automated UI regressions scripts",
-				"Software: VS Code, Git, GitLab, Postman, Android Emulator, Trello",
+				"Supported to develop and execute high level test scenarios on web and mobile.",
+				"Developed and implemented automation testing using pre-defined framework and practices in the company.",
+				"In charge of maintaining and monitoring automated UI regressions scripts.",
+				"Detected, documented, and reported defects/issues encountered.",
+				"Software: Git, GitLab, Postman, VS Code, Android Emulator, Trello, Google Workspace",
 				"Tech stack: Python, Robot Framework, Selenium Library"
 			]
 		},
@@ -47,25 +46,72 @@
 			"src": "./experience/aug99.png",
 			"title": "Quality Analyst Intern",
 			"date": "January 2022 - May 2022",
-			"desc": []
+			"desc": [
+				"Tested numerous WordPress real-estate websites.",
+				"Defect documentation.",
+				"Ticket handling.",
+				"Software: Salesforce, WordPress, BrowserStack, Slack, Google Workspace"
+			]
 		}
 	],
 
 	"projects": [
 		{
-			"project": "Portfolio",
-			"src": "./projects/portfolio.jpg",
-			"desc": "My personal website that you are currently browsing - also serves as an alternative for my resume.",
-			"stack": ["HTML", "Tailwind", "React", "Vite"],
+			"project": "Blog API",
+			"src": "./projects/blog.jpg",
+			"desc": "Ongoing project.",
+			"stack": [
+				"HTML",
+				"Tailwind",
+				"React",
+				"Node",
+				"Express",
+				"MongoDB",
+				"Mongoose",
+				"REST API"
+			],
 			"links": {
-				"github": "https://github.com/21ance/portfolio",
-				"figma": "https://www.figma.com/community/file/1248078629029147874"
+				"github": "https://github.com/21ance/blog"
 			}
 		},
 		{
-			"project": "Send",
+			"project": "Members Only",
+			"src": "./projects/members.jpg",
+			"desc": "A NodeJS project I developed in order to practice authentication (PassportJS). It has some interesting rules for users, members and non-members. Website's initial load might take up to a minute.",
+			"stack": [
+				"Pug",
+				"Tailwind",
+				"Node",
+				"Express",
+				"MongoDB",
+				"Mongoose"
+			],
+			"links": {
+				"github": "https://github.com/21ance/members-only",
+				"live": "https://members-0rr4.onrender.com/"
+			}
+		},
+		{
+			"project": "Computer Inventory",
+			"src": "./projects/inventory.jpg",
+			"desc": "My first NodeJS project. Using MongoDB as the project's database, I implemented CRUD operations for individual items and categories. Website's initial load might take up to a minute.",
+			"stack": [
+				"Pug",
+				"Tailwind",
+				"Node",
+				"Express",
+				"MongoDB",
+				"Mongoose"
+			],
+			"links": {
+				"github": "https://github.com/21ance/inventory-app/",
+				"live": "https://inventory-4k9m.onrender.com/"
+			}
+		},
+		{
+			"project": "Send - Mini Forum",
 			"src": "./projects/send.png",
-			"desc": "Mini forum website that uses REST API. The API endpoints were created using Strapi CMS. I then utilized asynchronous API calls to perform CRUD operations on the front end.",
+			"desc": "A React project that uses Strapi's easy-to-create API endpoints to create and display content.",
 			"stack": ["HTML", "Tailwind", "React", "Strapi", "REST API", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/send",
@@ -75,7 +121,7 @@
 		{
 			"project": "Dsgnr Landing Page",
 			"src": "./projects/dsgnr.jpg",
-			"desc": "A sample landing page.",
+			"desc": "My attempt to translate a Figma community design into an actual website.",
 			"stack": ["HTML", "Sass", "React", "Vite"],
 			"links": {
 				"github": "https://github.com/21ance/dsgnr",
@@ -86,7 +132,7 @@
 		{
 			"project": "Linkly",
 			"src": "./projects/linkly.jpg",
-			"desc": "Short link and QR code generator.",
+			"desc": "A website that uses free APIs to shorten a link and display its QR code.",
 			"stack": [
 				"HTML",
 				"Tailwind",
@@ -100,47 +146,53 @@
 				"live": "https://21ance.github.io/linkly/",
 				"figma": "https://www.figma.com/community/file/1238543222697425130"
 			}
-		},
-		{
-			"project": "Clothing E-commerce",
-			"src": "./projects/nox.jpg",
-			"desc": "Front-end clothing e-commerce website with add to cart feature.",
-			"stack": ["HTML", "Sass", "React", "CRA"],
-			"links": {
-				"github": "https://github.com/21ance/shopping-cart",
-				"live": "https://21ance.github.io/shopping-cart/"
-			}
 		}
 	],
 
-	"stack": [
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
-			"tech": "HTML"
-		},
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
-			"tech": "CSS"
-		},
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png",
-			"tech": "Sass"
-		},
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png",
-			"tech": "Tailwind"
-		},
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
-			"tech": "JavaScript"
-		},
-		{
-			"src": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
-			"tech": "React"
-		},
-		{
-			"src": "./strapi.png",
-			"tech": "Strapi"
-		}
-	]
+	"stack": {
+		"frontend": [
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
+				"tech": "HTML"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
+				"tech": "CSS"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png",
+				"tech": "Sass"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png",
+				"tech": "Tailwind"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+				"tech": "JavaScript"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
+				"tech": "React"
+			}
+		],
+		"backend": [
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png",
+				"tech": "NodeJS"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png",
+				"tech": "Express"
+			},
+			{
+				"src": "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png",
+				"tech": "MongoDB"
+			},
+			{
+				"src": "./strapi.png",
+				"tech": "Strapi"
+			}
+		]
+	}
 }
